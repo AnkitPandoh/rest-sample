@@ -40,7 +40,7 @@ public class EmployeeController {
 		} catch (NumberFormatException ex) {
 			throw new InvalidInputException("Please provide valid id");
 		}
-		EmployeeModel employee = employeeService.getEmployeeById(Long.valueOf(employeeId));
+		EmployeeModel employee = employeeService.getEmployeeById(id);
 		return new ResponseEntity<EmployeeModel>(employee, HttpStatus.OK);
 	}
 }

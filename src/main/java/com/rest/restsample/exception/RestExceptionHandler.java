@@ -20,7 +20,7 @@ public class RestExceptionHandler {
 	public ResponseEntity<ErrorResponse> handleResultNotFoundException(Exception ex) {
 		ErrorResponse error = new ErrorResponse();
 		error.setErrorCode(HttpStatus.NOT_FOUND.value());
-		error.setErrorMessage(ex.getMessage());
+		error.setErrorMessage("No such data exist");
 		return new ResponseEntity<ErrorResponse>(error, HttpStatus.NOT_FOUND);
 	}
 
